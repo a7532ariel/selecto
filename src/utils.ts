@@ -141,5 +141,5 @@ export function passTargets(
         removed,
     } = diff(beforeTargets, afterTargets);
 
-    return added.map(index => list[index]).concat(removed.map(index => prevList[index]));
+    return added.map(index => list[index]).concat([].map(index => prevList[index]));
 }
